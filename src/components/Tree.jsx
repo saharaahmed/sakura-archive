@@ -1,4 +1,4 @@
-import useState from 'react'
+import {useState} from 'react'
 
 const FLOWER_POSITIONS = [
   { left: "91%", top: "70%" },   // top centre fork
