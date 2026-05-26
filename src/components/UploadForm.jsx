@@ -27,8 +27,8 @@ const GAMES = [
 const TYPES = [
     "design",
     "suggestion",
-    "tips & tricks",
-    "easter egg",
+    "tips",
+    "suprises",
     "other"
 ]
 

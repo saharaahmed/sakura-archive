@@ -17,9 +17,9 @@ const FLOWER_POSITIONS = [
 ]
 
 const FLOWER_COLORS = {
-  "easter egg": { petal: "#f9c8d8", center: "#e87a9a" },
+  surprises: { petal: "#f9c8d8", center: "#e87a9a" },
   design: { petal: "#c8d8f9", center: "#7a9ae8" },
-  "tips & tricks": { petal: "#c8f9d8", center: "#7ae8a0" },
+  tips: { petal: "#c8f9d8", center: "#7ae8a0" },
   suggestion: { petal: "#f9e8c8", center: "#e8b87a" },
   other: { petal: "#e8c8f9", center: "#d87ae8" },
 }
