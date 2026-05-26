@@ -1,5 +1,3 @@
-import useState from 'react'
-
 const FLOWER_POSITIONS = [
   { left: "91%", top: "70%" },   // top centre fork
   { left: "58%", top: "4%" },   // top centre right tip

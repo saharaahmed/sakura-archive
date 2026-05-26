@@ -2,33 +2,34 @@ import {useState} from 'react'
 import {supabase} from '../supabase'
 
 const GAMES = [
-    "Animal Crossing: New Horizons",
-    "Stardew Valley",
-    "Tomodachi Life: Living the Dream",
-    "The Sims 4",
-    "Minecraft",
-    "Danganronpa: Trigger Happy Havoc",
-    "Danganronpa 2: Goodbye Despair",
-    "Danganronpa Another Episode: Ultra Despair Girls",
-    "Danganronpa V3: Killing Harmony",
-    "Danganronpa S: Ultimate Summer Camp",
-    "Love and Deepspace",
-    "Tears of Themis",
-    "SUPERSTAR SMTOWN",
-    "Honkai: Star Rail",
-    "Honkai Impact 3rd",
-    "Genshin Impact",
-    "Obey Me!",
-    "League of Legends",
-    "Valorant",
-    "Overwatch"]
+    "animal crossing: new horizons",
+    "danganronpa another episode: ultra despair girls",
+    "danganronpa: trigger happy havoc",
+    "danganronpa 2: goodbye despair",
+    "danganronpa v3: killing harmony",
+    "danganronpa s: ultimate summer camp",
+    "genshin impact",
+    "honkai impact 3rd",
+    "honkai: star rail",
+    "league of legends",
+    "love and deepspace",
+    "minecraft",
+    "obey me!",
+    "overwatch",
+    "stardew valley",
+    "superstar smtown",
+    "tears of themis",
+    "the sims 4",
+    "tomodachi life: living the dream",
+    "valorant",
+]
 
 const TYPES = [
-    "Design",
-    "Suggestion",
-    "Tips & Tricks",
-    "Easter Egg",
-    "Other"
+    "design",
+    "suggestion",
+    "tips & tricks",
+    "easter egg",
+    "other"
 ]
 
 export default function UploadForm({onSuccess}) {

@@ -8,25 +8,26 @@ import Tree from './components/Tree'
 
 const GAMES = [
     "animal crossing: new horizons",
-    "stardew valley",
-    "tomodachi life: living the dream",
-    "the sims 4",
-    "minecraft",
+    "danganronpa another episode: ultra despair girls",
     "danganronpa: trigger happy havoc",
     "danganronpa 2: goodbye despair",
-    "danganronpa another episode: ultra despair girls",
     "danganronpa v3: killing harmony",
     "danganronpa s: ultimate summer camp",
-    "love and deepspace",
-    "tears of themis",
-    "superstar smtown",
-    "honkai: star rail",
-    "honkai impact 3rd",
     "genshin impact",
-    "obey me!",
+    "honkai impact 3rd",
+    "honkai: star rail",
     "league of legends",
+    "love and deepspace",
+    "minecraft",
+    "obey me!",
+    "overwatch",
+    "stardew valley",
+    "superstar smtown",
+    "tears of themis",
+    "the sims 4",
+    "tomodachi life: living the dream",
     "valorant",
-    "overwatch"]
+]
 
 const TYPES = [
     "design",
@@ -189,64 +190,3 @@ export default function App() {
     </div>
   )
 }
-
-
-/*
-export default function App() {
-
-  const [uploads, setUploads] = useState([])
-  const [selectedGame, setSelectedGame] = useState('all')
-  const [selectedType, setSelectedType] = useState('all')
-  const [activeUpload, setActiveUpload] = useState(null)
-
-  useEffect(() => {
-    fetchUploads()
-  }, [])
-
-  async function fetchUploads() {
-    const {data} = await supabase
-    .from('uploads')
-    .select('*')
-    .order('created_at', { ascending: false })
-  if (data) setUploads(data)
-  }
-
-  const filtered = uploads.filter(u =>
-    (selectedGame === 'all' || u.game === selectedGame) &&
-    (selectedType === 'all' || u.type === selectedType)
-  )
-
-  console.log("uploads:", uploads)
-  console.log("filtered:", filtered)
-    
-  return (
-    <div className="app">
-      <h1>Game Tree Archive</h1>
-
-      <GameFilter
-        selectedGame={selectedGame}
-        setSelectedGame={setSelectedGame}
-        selectedType={selectedType}
-        setSelectedType={setSelectedType}
-      />
-      <Tree
-        uploads={filtered}
-        activeUpload={activeUpload}
-        setActiveUpload={setActiveUpload}
-      />
-
-      {activeUpload && (
-        <div className="upload-details">
-          <span className="tag">{activeUpload.type}</span>
-          <h2>{activeUpload.title}</h2>
-          <p>{activeUpload.description}</p>
-          <small> by {activeUpload.author || "an anonymous user"} - {activeUpload.game}</small>
-          <button onClick={() => setActiveUpload(null)}>Close</button>
-        </div>
-      )}
-
-      <UploadForm onSuccess={fetchUploads} />
-
-    </div>
-  )
-}*/
