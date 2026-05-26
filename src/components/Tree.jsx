@@ -1,20 +1,49 @@
 const FLOWER_POSITIONS = [
-  { left: "91%", top: "70%" },   // top centre fork
-  { left: "58%", top: "4%" },   // top centre right tip
-  { left: "38%", top: "12%" },  // upper left cluster
-  { left: "30%", top: "18%" },  // mid left branch
-  { left: "18%", top: "28%" },  // far left branch tip
-  { left: "12%", top: "35%" },  // low left tip
-  { left: "22%", top: "42%" },  // low left inner
-  { left: "70%", top: "22%" },  // right branch tip
-  { left: "80%", top: "30%" },  // far right tip
-  { left: "75%", top: "38%" },  // right lower tip
-  { left: "65%", top: "44%" },  // right inner
-  { left: "45%", top: "30%" },  // centre inner left
-  { left: "55%", top: "35%" },  // centre inner right
-  { left: "14%", top: "58%" },  // bottom left branch
-  { left: "20%", top: "65%" },  // bottom left tip
-]
+  { left: "91%", top: "70%" },
+  { left: "62%", top: "10%" },  
+  { left: "21%", top: "8%" },  
+  { left: "46%", top: "15%" }, 
+  { left: "19%", top: "28%" },  
+
+  { left: "1%", top: "38%" },  
+  { left: "8%", top: "47%" }, 
+  { left: "57%", top: "24%" },
+  { left: "82%", top: "30%" },
+  { left: "70%", top: "38%" }, 
+
+  { left: "60%", top: "45%" }, 
+  { left: "33%", top: "12%" }, 
+  { left: "97%", top: "32%" },  
+  { left: "9%", top: "62%" },  
+  { left: "6%", top: "76%" },
+
+  { left: "22%", top: "71%" },  
+  { left: "12%", top: "70%" }, 
+  { left: "98%", top: "41%" },  
+  { left: "95%", top: "47%" },  
+  { left: "93%", top: "52%" },
+
+  { left: "81%", top: "40%" },
+  { left: "75%", top: "47%" },
+  { left: "75%", top: "66%" },
+  { left: "84%", top: "59%" }, 
+  { left: "70%", top: "59%" }, 
+
+  { left: "16%", top: "38%" },  
+  { left: "34%", top: "40%" }, 
+  { left: "9%", top: "19%" },
+  { left: "18%", top: "17%" },
+  { left: "31%", top: "23%" },
+
+  { left: "21%", top: "62%" },  
+  { left: "28%", top: "44%" }, 
+  { left: "74%", top: "27%" },
+  { left: "68%", top: "28%" },
+  { left: "48%", top: "28%" },
+
+] // total of 35 flowers that show on the tree
+// all positions are randomised and fixed
+// entries after 35 are added to the db BUT won't always be shown on the tree
 
 const FLOWER_COLOURS = {
   surprises: { petal: "#f9c8d8", center: "#e87a9a" },
