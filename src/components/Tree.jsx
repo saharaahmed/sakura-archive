@@ -21,6 +21,7 @@ const FLOWER_COLORS = {
   design:     { petal: "#c8d8f9", center: "#7a9ae8" },
   secret:     { petal: "#c8f9d8", center: "#7ae8a0" },
   suggestion: { petal: "#f9e8c8", center: "#e8b87a" },
+  other:      { petal: "#e8c8f9", center: "#d87ae8" },
 }
 
 function Flower({ position, upload, onClick, isActive }) {
