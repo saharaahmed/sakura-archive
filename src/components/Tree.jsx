@@ -16,7 +16,7 @@ const FLOWER_POSITIONS = [
   { left: "20%", top: "65%" },  // bottom left tip
 ]
 
-const FLOWER_COLORS = {
+const FLOWER_COLOURS = {
   surprises: { petal: "#f9c8d8", center: "#e87a9a" },
   design: { petal: "#c8d8f9", center: "#7a9ae8" },
   tips: { petal: "#c8f9d8", center: "#7ae8a0" },
@@ -25,7 +25,7 @@ const FLOWER_COLORS = {
 }
 
 function Flower({ position, upload, onClick, isActive }) {
-  const colors = FLOWER_COLORS[upload?.type] || FLOWER_COLORS.tip
+  const colours = FLOWER_COLOURS[upload?.type] || FLOWER_COLOURS.tips
   const size = isActive ? 44 : 36
 
   return (
@@ -49,20 +49,20 @@ function Flower({ position, upload, onClick, isActive }) {
         viewBox="0 0 44 44"
         xmlns="http://www.w3.org/2000/svg"
       >
-        {/* petals */}
-        <circle cx="22" cy="9"  r="8" fill={colors.petal} opacity="0.9" />
-        <circle cx="22" cy="35" r="8" fill={colors.petal} opacity="0.9" />
-        <circle cx="9"  cy="22" r="8" fill={colors.petal} opacity="0.9" />
-        <circle cx="35" cy="22" r="8" fill={colors.petal} opacity="0.9" />
-        <circle cx="12" cy="12" r="7" fill={colors.petal} opacity="0.75" />
-        <circle cx="32" cy="12" r="7" fill={colors.petal} opacity="0.75" />
-        <circle cx="12" cy="32" r="7" fill={colors.petal} opacity="0.75" />
-        <circle cx="32" cy="32" r="7" fill={colors.petal} opacity="0.75" />
-        {/* centre */}
-        <circle cx="22" cy="22" r="9" fill={colors.center} />
+        {/* petals for flowers */}
+        <circle cx="22" cy="9"  r="8" fill={colours.petal} opacity="0.9" />
+        <circle cx="22" cy="35" r="8" fill={colours.petal} opacity="0.9" />
+        <circle cx="9"  cy="22" r="8" fill={colours.petal} opacity="0.9" />
+        <circle cx="35" cy="22" r="8" fill={colours.petal} opacity="0.9" />
+        <circle cx="12" cy="12" r="7" fill={colours.petal} opacity="0.75" />
+        <circle cx="32" cy="12" r="7" fill={colours.petal} opacity="0.75" />
+        <circle cx="12" cy="32" r="7" fill={colours.petal} opacity="0.75" />
+        <circle cx="32" cy="32" r="7" fill={colours.petal} opacity="0.75" />
+        {/* centre of flower */}
+        <circle cx="22" cy="22" r="9" fill={colours.center} />
         {/* active ring */}
         {isActive && (
-          <circle cx="22" cy="22" r="20" fill="none" stroke={colors.center} strokeWidth="2" opacity="0.5" />
+          <circle cx="22" cy="22" r="20" fill="none" stroke={colours.center} strokeWidth="2" opacity="0.5" />
         )}
       </svg>
     </div>
@@ -86,8 +86,8 @@ function EmptyBud({ position }) {
 }
 
 export default function Tree({ uploads, setActiveUpload, activeUpload }) {
-  // randomly pick which uploads get flowers — keeps it fresh on filter change
-  const shuffled = [...uploads].sort(() => Math.random() - 0.5)
+  // randomly displays flowers from uploads.
+  const shuffled = [...(uploads || [])].sort(() => Math.random() - 0.5)
   const visibleFlowers = shuffled.slice(0, FLOWER_POSITIONS.length)
   const emptySlots = FLOWER_POSITIONS.slice(visibleFlowers.length)
 
@@ -95,8 +95,7 @@ export default function Tree({ uploads, setActiveUpload, activeUpload }) {
     <div style={{
       position: "relative",
       width: "48%",
-      // this keeps the wrapper the same aspect ratio as your 2048x2048 image
-      aspectRatio: "1 / 1",
+      aspectRatio: "1 / 1", // to keep the aspect ratio of my tree image.
       maxHeight: "600px",
       margin: "0 auto",
     }}>
@@ -106,7 +105,7 @@ export default function Tree({ uploads, setActiveUpload, activeUpload }) {
         style={{
           width: "100%",
           height: "100%",
-          objectFit: "contain",  // scales it down, preserves ratio, no cropping
+          objectFit: "contain",  // scales it down tree
           display: "block",
         }}
       />
