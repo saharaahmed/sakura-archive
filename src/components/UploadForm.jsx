@@ -28,7 +28,7 @@ const TYPES = [
     "design",
     "suggestion",
     "tips",
-    "suprises",
+    "surprises",
     "other"
 ]
 
