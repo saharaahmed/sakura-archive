@@ -5,6 +5,7 @@ const GAMES = [
     "danganronpa 2: goodbye despair",
     "danganronpa v3: killing harmony",
     "danganronpa s: ultimate summer camp",
+    "fantasy life ds",
     "genshin impact",
     "honkai impact 3rd",
     "honkai: star rail",
