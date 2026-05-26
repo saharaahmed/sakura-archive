@@ -287,10 +287,11 @@ body {
   letter-spacing: 0.03em;
 }
 
-.ct-tip        { background: #fce8d8; color: #854f0b; }
-.ct-design     { background: #fce8f0; color: #72243e; }
-.ct-secret     { background: #e8f0d8; color: #27500a; }
-.ct-suggestion { background: #eee8fc; color: #3c3489; }
+.ct-suggestion { background: #fce8d8; color: #854f0b; }
+.ct-easter-egg { background: #fce8f0; color: #72243e; }
+.ct-tips-tricks { background: #e8f0d8; color: #27500a; }
+.ct-design { background: #eee8fc; color: #3c3489; }
+.ct-other { background: #e8d8f0; color: #63407a; }
 
 .card-title {
   font-size: 13px;
