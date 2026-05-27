@@ -19,7 +19,7 @@ body {
   background: #fdf6f0;
 }
 
-/* ── header ── */
+/* header */
 .topbar {
   background: #3d2314;
   padding: 14px 24px;
@@ -45,13 +45,13 @@ body {
   color: #c49a7a;
 }
 
-/* ── body layout ── */
+/* body layout */
 .body {
   display: flex;
   flex: 1;
 }
 
-/* ── sidebar ── */
+/* sidebar */
 .sidebar {
   width: 220px;
   min-width: 220px;
@@ -92,6 +92,7 @@ body {
   color: #3d1825;
 }
 
+/* cards displayed at the bottom */
 .chip-row {
   display: flex;
   flex-wrap: wrap;
@@ -125,7 +126,7 @@ body {
   border-top: 1px solid #f0c8c8;
 }
 
-/* ── upload form ── */
+/*  upload form  */
 .upload-label {
   font-size: 13px;
   color: #5a2d3a;
@@ -183,7 +184,7 @@ body {
   cursor: not-allowed;
 }
 
-/* ── main area ── */
+/*  main area  */
 .main {
   flex: 1;
   padding: 20px;
@@ -193,7 +194,7 @@ body {
   overflow-y: auto;
 }
 
-/* ── tree box ── */
+/*  tree box  */
 .tree-box {
   background: #fff8f5;
   border: 1px solid #f0ccc8;
@@ -208,7 +209,7 @@ body {
   margin-bottom: 10px;
 }
 
-/* ── active upload tooltip ── */
+/*  active upload tooltip  */
 .active-tooltip {
   position: absolute;
   top: 16px;
@@ -258,7 +259,7 @@ body {
   font-family: Georgia, serif;
 }
 
-/* ── cards grid ── */
+/*  cards grid  */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -324,8 +325,6 @@ body {
   cursor: pointer;
   outline: none;
   appearance: none;
-  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23c4547a' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); */
-  background-repeat: no-repeat;
   background-position: right 10px center;
   padding-right: 28px;
 }

@@ -1,3 +1,5 @@
+import { useMemo } from 'react'
+
 const FLOWER_POSITIONS = [
   { left: "91%", top: "70%" },
   { left: "62%", top: "10%" },  
@@ -115,11 +117,9 @@ function EmptyBud({ position }) {
 }
 
 export default function Tree({ uploads, setActiveUpload, activeUpload }) {
-  // randomly displays flowers from uploads.
   const visibleFlowers = useMemo(() => {
     return uploads.slice(0, FLOWER_POSITIONS.length) // max number of flowers that can be shown
   }, [uploads])
-  
   const emptySlots = FLOWER_POSITIONS.slice(visibleFlowers.length)
 
   return (
