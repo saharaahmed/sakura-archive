@@ -116,8 +116,10 @@ function EmptyBud({ position }) {
 
 export default function Tree({ uploads, setActiveUpload, activeUpload }) {
   // randomly displays flowers from uploads.
-  //const shuffled = [...(uploads || [])].sort(() => Math.random() - 0.5)
-  const visibleFlowers = shuffled.slice(0, FLOWER_POSITIONS.length)
+  const visibleFlowers = useMemo(() => {
+    return uploads.slice(0, FLOWER_POSITIONS.length) // max number of flowers that can be shown
+  }, [uploads])
+  
   const emptySlots = FLOWER_POSITIONS.slice(visibleFlowers.length)
 
   return (
